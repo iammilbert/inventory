@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+  @include('/head')
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+<header class="main-header">
+@include('/header')
+</header>
+
+<!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+  @include('/adminLeftSideBar')
+  </aside>
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+
+  
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Recent Orders</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  
+                  <th>Date Order</th>
+                  <th>Quantity</th>
+                  <th>Unit Cost Price</th>
+                  <th>Total Cost Price</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+                </thead>             
+                <tr>
+                  <td>PSP browser</td>
+                    <td>PSP browser</td>
+                   <td>PSP </td>
+                   <td>PSP </td>
+                   <td><span class="label label-success">Approved</span></td>
+                    
+
+                    <td>
+
+                        <a type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal-success">view
+                            </a>
+
+                      <a href="#" class='btn btn-sm btn-danger' name="delete" ><i class='fa fa-trash'></i>
+                      </a>
+
+                     
+
+                    
+
+                      </td>
+                    </tr>
+                  </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+
+
+        </div>
+        <!-- /.col -->
+         <div class="col-md-1"></div>
+      </div>
+      <!-- /.row -->
+<style type="text/css">
+  .form-group select{
+    color: black;
+  }
+  .form-group textarea{
+    color: black;
+  }
+</style>
+<!-- Modal for View confirm Order  -->
+             <div class="modal fade" id="modal-success">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+
+                <h4 class="text-center">DARL DISTRIBUTORS<br>NIG. LTD<br>Wholesales and Retail</h4>
+            
+              </div>
+              <div class="modal-body">
+               <form role="form" class="form">
+                <div class="row">
+                  <div class="col-md-6">
+                     
+                        <label>Order by: </label> Joseph<br>
+                        <label>Invoice No.: </label> 01995<br>
+                        <label>Date.: </label> 07/27/1995
+                  
+                  </div>
+
+                   <div class="col-md-6">
+                 
+                        <label>Supplier: </label> Jetstream Limited <br>
+                        <label>Delivery Type: </label> Constructive <br>
+                        <label>Mobile.: </label> 08188701995
+         
+                  </div>
+                  
+                </div>
+                
+               </form>
+               <table class="table">
+                       
+                <tr>
+                  <th>Customer:</th>
+                  <td>Rosemary</td>
+                  <th>Mobile:</th>
+                   <td>081378237 </td>  
+                </tr>
+
+                <tr>
+                  <th>Desccription</th>
+                  <th>Qty</th>
+                  <th>Price</th>
+                  <th>Amount</th>
+                </tr>
+         
+              </table>
+
+              </div>
+              <div class="modal-footer">
+                <button style="background-color: red;" type="button" class="btn btn-outline pull-left" data-dismiss="modal" >Cancel</button>
+                <button style="background-color: darkred;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-success-edit">Edit</button>
+                <button style="background-color: darkcyan;" type="button" class="btn btn-outline pull-center">Print</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+
+
+
+
+        <!-- Modal for View Inventory Report -->
+             <div class="modal modal-success fade" id="modal-success-edit">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Recent Order Preview</h4>
+              </div>
+              <div class="modal-body">
+               
+               <form role="form" method="POST" action="#">
+                <div class="row">
+                  <div class="box-body">
+
+                  <div class="col-md-6">
+
+                <div class="form-group">
+                  <label>Date Order</label>
+                      <input name="datepurchased" type="text" class="form-control">
+                </div>
+
+                  <div class="form-group">
+                    <label>Product Name </label>
+                    <input name="name" type="text" class="form-control">
+                  </div>
+
+                    <div class="form-group">
+                       <label>Product Category </label>
+                        <input name="category" type="text" class="form-control">
+                    </div>
+
+                  <div class="form-group">
+                    <label>Product Brand </label>
+                    <input name="brand" type="text" class="form-control">
+                  </div>
+
+                  </div> 
+          
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Quantity </label>
+                      <input name="quantity" type="text" class="form-control" >
+                    </div>
+
+                   <div class="form-group">
+                      <label>Unit Cost Price </label>
+                      <input name="unitcost" type="text" class="form-control" >
+                    </div>
+
+                    <div class="form-group">
+                      <label>Total Cost Price </label>
+                      <input name="totalcost" type="text" class="form-control" >
+                    </div>
+
+                    <div class="form-group">
+                    <label>Supplier Name </label>
+                    <input name="name" type="text" class="form-control" >
+                  </div>
+                  </div>
+
+                  <!-- /.box-body -->
+                  </div>
+                </div>
+              </div>
+            </form>
+
+              </div>
+              <div class="modal-footer">
+                <button style="background-color:darkred" type="button" class="btn btn-primary pull-left" data-dismiss="modal">Cancel</button>
+                <button style="background-color: darkcyan;" type="button" class="btn btn-primary">update</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+    </section>
+    <!-- /.content -->
+  </div>
+ 
+
+<footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 1.0.0
+    </div>
+    <strong>Copyright &copy; 2022  -  {{ date('Y') }} </a>.</strong> All rights
+    reserved.
+  </footer>
+
+  
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="/bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="/dist/js/demo.js"></script>
+
+
+
+
+
+
+<script src="/bower_components/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $(function () {
+   //Initialize Select2 Elements
+    $('.select2').select2()
+
+})
+  $.widget.bridge('uibutton', $.ui.button);
+
+    $(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+</script>
+<!-- Autocalculation -->
+<!-- Custom scripts -->
+  <script src="/vendor/auto/scripts.js"></script>
+
+
+
+
+  <!-- DataTables -->
+<script src="/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+</body>
+</html>
